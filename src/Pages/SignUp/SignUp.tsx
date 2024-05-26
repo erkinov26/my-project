@@ -13,7 +13,6 @@ export default function SignUp() {
     mutationFn: signUp,
     onSuccess: (data) => {
       Cookies.set("key", data.data.data.key);
-      Cookies.set("secret", data.data.data.secret);
       navigate("/books")
     },
     onError: () => {

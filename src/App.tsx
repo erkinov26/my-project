@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { ToastContainer } from 'react-toastify';
 
   import 'react-toastify/dist/ReactToastify.css';
+import AllBooks from "./Pages/AllBooks/AllBooks";
 
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       path: "/",
       element: <SignUp />,
     },
+    {
+      path:"/books",
+      element:<AllBooks />
+    }
   ]);
   return (
     <Provider>
