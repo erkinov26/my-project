@@ -2,14 +2,16 @@ import axios from "axios";
 import { SignUpT } from "../types/type";
 
 const instance = axios.create({
-    baseURL:"",
+  baseURL: "https://no23.lavina.tech",
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
-})
+export const signUp = (body: SignUpT) => {
+  return instance.post("signup", body);
+};
 
-export const signUp=(body:SignUpT) =>{
-    return instance.post("singup", body)
-}
-
-export const getAllData = () =>{
-    return instance.get("")
-}
+export const getAllData = () => {
+  return instance.get("");
+};

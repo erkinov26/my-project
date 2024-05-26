@@ -1,8 +1,18 @@
-interface InputProps {
-  placeholder: string;
-  type: string;
-}
+// // import { MutableRefObject } from "react";
 
-export default function Input({ placeholder, type }: InputProps) {
-  return <input type={type} className="FormInput" placeholder={placeholder} />;
-}
+// interface InputProps {
+//   placeholder: string;
+//   type: string;
+//   innerRef: LegacyRef<HTMLInputElement>;
+// }
+
+// export default function Input({ placeholder, type, innerRef }: InputProps) {
+//   return (
+//     <input
+//       type={type}
+//       ref={innerRef}
+//       className="FormInput"
+//       placeholder={placeholder}
+//     />
+//   );
+// }
