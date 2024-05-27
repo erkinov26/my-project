@@ -7,13 +7,13 @@ import Cookies from "js-cookie";
 import { useNavigate } from "react-router";
 
 export default function SignUp() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { mutate, isPending } = useMutation({
     mutationKey: ["signup"],
     mutationFn: signUp,
     onSuccess: (data) => {
       Cookies.set("key", data.data.data.key);
-      navigate("/books")
+      navigate("/books");
     },
     onError: () => {
       toast.error("Something went wrong!");

@@ -18,8 +18,9 @@ export const getAllData = (args: getAllT) => {
   if (args.search) params.append("title", args.search);
   const headers: Record<string, string> = {};
   headers["Key"] = Cookies.get("key") || "";
-  headers["Sign"] = "33b6b89a9e241b226594ce0e6193370d";
+  headers["Sign"] = "2892678138d8d793a28fc49055095d8b";
   return instance.get(`${args.url}${params.size ? `:${params}` : ""}`, {
     headers,
-  });
+  }
+);
 };
